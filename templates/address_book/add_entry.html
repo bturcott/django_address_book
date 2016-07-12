@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Address Book</title>
+</head>
+<body>
+	<h1>Add an Entry</h1>
+	<form id="entry_form" method="POST" action="/address_book/add_entry/">
+			{% csrf_token %}
+			<b>First Name: </b>{{form.first_name}}<br>
+			<b>Last Name: </b>{{form.last_name}}<br>
+			<b>Street Address: </b>{{form.street_address}}<br>
+			<b>Email: </b>{{form.email}}<br>
+			<b>Phone Number: </b>{{form.phone_number}}<br>
+    <input type="submit" name="submit" value="Create Entry" /><br>
+    <a href="/address_book/">Go back</a><br/>
+    </form>
+</body>
+</html>

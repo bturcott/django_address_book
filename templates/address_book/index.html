@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Address Book</title>
+</head>
+<body>
+		<h1> Customer Address Book </h1>
+		{% if first_name %}
+			<ul>
+			{% for entry in first_name %}
+			<b>First Name:</b> {{entry.first_name}}<br>
+			<b>Last Name:</b> {{entry.last_name}}<br>
+			<b>Address:</b> {{entry.street_address}}<br>
+			<b>Email:</b>{{entry.email}}<br>
+			<b>Phone Number:</b>{{entry.phone_number}}<br>
+			<br>
+			{% endfor %}
+			</ul>
+		{% else %}
+			<strong>There are no entries present.</strong>
+		{% endif %}
+	<a href="/address_book/add_entry/">Add a New Entry</a><br/>
+</body>
+</html>
