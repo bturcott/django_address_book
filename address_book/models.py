@@ -9,3 +9,6 @@ class Entry(models.Model):
 
 	def __unicode__(self):
 		return self.email
+
+#Add vendor customer field
+#Add date added field

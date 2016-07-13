@@ -14,5 +14,3 @@ class EntryForm(forms.ModelForm):
 			'street_address', 'email', 'phone_number')
 
 
-
-

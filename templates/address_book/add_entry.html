@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Address Book</title>
-</head>
+{% extends 'base.html' %}
+{% block title %} Add Entry {% endblock %}
 <body>
+	{% block body_block %}
 	<h1>Add an Entry</h1>
 	<form id="entry_form" method="POST" action="/address_book/add_entry/">
 			{% csrf_token %}
@@ -11,9 +9,10 @@
 			<b>Last Name: </b>{{form.last_name}}<br>
 			<b>Street Address: </b>{{form.street_address}}<br>
 			<b>Email: </b>{{form.email}}<br>
-			<b>Phone Number: </b>{{form.phone_number}}<br>
-    <input type="submit" name="submit" value="Create Entry" /><br>
-    <a href="/address_book/">Go back</a><br/>
+			<b>Phone Number: </b>{{form.phone_number}}<br><br>
+    <input type="submit" name="submit" value="Create Entry" /><br><br>
+    <a href="/address_book/">Address Book</a><br/>
     </form>
+    {% endblock %}
 </body>
 </html>

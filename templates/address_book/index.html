@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Address Book</title>
-</head>
+{% extends 'base.html' %}
+{% block title %} Address Book {% endblock %}
 <body>
+		{% block body_block %}
 		<h1> Customer Address Book </h1>
 		{% if first_name %}
 			<ul>
@@ -19,6 +17,7 @@
 		{% else %}
 			<strong>There are no entries present.</strong>
 		{% endif %}
-	<a href="/address_book/add_entry/">Add a New Entry</a><br/>
+		<a href="/address_book/add_entry/">Add a New Entry</a><br/>
+		{% endblock %}
 </body>
 </html>
