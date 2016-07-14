@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rango',
     'address_book',
+    'authentication',
 )
 
 MIDDLEWARE_CLASSES = (
